@@ -15,6 +15,7 @@ Feature: Teachers should be able to Navigate to Menus
     When the user navigates to All Posts menu
     Then the user should be able to see the header of the menu
 
+  @db
   Scenario: Navigating to My Account menu
     Given the user is on the login page
     And the user enters teacher credentials
