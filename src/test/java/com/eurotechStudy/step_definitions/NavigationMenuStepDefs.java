@@ -1,8 +1,12 @@
 package com.eurotechStudy.step_definitions;
 
+import com.eurotechStudy.pages.DashboardPage;
+import com.eurotechStudy.pages.DevelopersPage;
+import com.eurotechStudy.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class NavigationMenuStepDefs {
 
@@ -15,13 +19,19 @@ public class NavigationMenuStepDefs {
     @When("the user navigates to Developers menu")
     public void the_user_navigates_to_Developers_menu() {
 
-        System.out.println("Navigating to Developers menu");
+        new DashboardPage().developers.click();
+
     }
 
     @Then("the user should be able to see the header of the menu")
     public void the_user_should_be_able_to_see_the_header_of_the_menu() {
 
+        String expectedText="Filter Profiles by Skill or by Location";
+      //  BrowserUtils.verifyElementDisplayed(new DevelopersPage().developersHead);
         System.out.println("The user can see the header");
+        String actualText=new DevelopersPage().developersHead.getText();
+        Assert.assertEquals("Verify head text",expectedText,actualText);
+
     }
 
     @When("the user navigates to All Posts menu")

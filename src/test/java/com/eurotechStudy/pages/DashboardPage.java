@@ -34,6 +34,8 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//td[contains(text(),'Microsoft')]/../td[2]")
     public WebElement usersTitle;
 
+
+
     public String getTitle(String companyName){
         String title= Driver.get().findElement(By.xpath("//td[contains(text(),'"+companyName+"')]/../td[2]")).getText();
         return title;
