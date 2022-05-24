@@ -1,4 +1,6 @@
+@navigate
 Feature: Navigate to menu with Parameters
+
 
   Scenario: User navigate to menu
     Given the user is on the login page

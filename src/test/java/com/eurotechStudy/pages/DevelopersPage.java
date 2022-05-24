@@ -14,7 +14,6 @@ public class DevelopersPage extends BasePage{
         Driver.get().findElement(By.xpath("//*[text()='"+menuType+"']")).click();
     }
 
-
     public String getHeadText(String text){
         return Driver.get().findElement(By.xpath("//section[@class='container']/*[contains(text(),'"+text+"')]")).getText();
 
