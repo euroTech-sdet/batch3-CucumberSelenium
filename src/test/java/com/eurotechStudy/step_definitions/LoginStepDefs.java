@@ -2,6 +2,7 @@ package com.eurotechStudy.step_definitions;
 
 import com.eurotechStudy.pages.DashboardPage;
 import com.eurotechStudy.pages.LoginPage;
+import com.eurotechStudy.utilities.BrowserUtils;
 import com.eurotechStudy.utilities.ConfigurationReader;
 import com.eurotechStudy.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -26,6 +27,7 @@ public class LoginStepDefs {
         String password=ConfigurationReader.get("passwordTeacher");
         LoginPage loginPage=  new LoginPage();
         loginPage.login(username,password);
+        BrowserUtils.waitFor(2);
     }
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() {
@@ -46,6 +48,19 @@ public class LoginStepDefs {
 
         System.out.println("Entering developer credentials");
     }
+    @When("the user logs in using {string} and {string}")
+    public void the_user_logs_in_using_and(String username, String password) {
+        new LoginPage().login(username, password);
+        BrowserUtils.waitFor(2);
+
+    }
 
 
+    @Then("the user should be able to login and see message {string}")
+    public void theUserShouldBeAbleToLoginAndSeeMessage(String name) {
+//        DashboardPage dashboardPage = new DashboardPage();
+//        String actualMessage=dashboardPage.welcomeMessage.getText();
+//        Assert.assertTrue(actualMessage.contains(name));
+        Assert.assertTrue(new DashboardPage().welcomeMessage.getText().contains(name));
+    }
 }
