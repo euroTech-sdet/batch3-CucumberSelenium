@@ -3,6 +3,7 @@ package com.eurotechStudy.step_definitions;
 import com.eurotechStudy.pages.DashboardPage;
 import com.eurotechStudy.pages.DevelopersPage;
 import com.eurotechStudy.utilities.BrowserUtils;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -46,4 +47,17 @@ public class NavigationMenuStepDefs {
         System.out.println("Navigating to My Account");
     }
 
+    @And("the user navigates to {string} menu")
+    public void theUserNavigatesToMenu(String menuType) {
+        BrowserUtils.waitFor(2);
+        new DevelopersPage().navigateToMenu(menuType);
+    }
+
+    @Then("the user should be able to see header as {string}")
+    public void theUserShouldBeAbleToSeeHeaderAs(String headerText) {
+
+        BrowserUtils.waitFor(2);
+        String actualText=new DevelopersPage().getHeadText(headerText);
+        Assert.assertEquals(headerText,actualText);
+    }
 }
