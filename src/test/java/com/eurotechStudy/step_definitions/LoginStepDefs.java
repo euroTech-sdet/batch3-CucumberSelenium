@@ -5,6 +5,7 @@ import com.eurotechStudy.pages.LoginPage;
 import com.eurotechStudy.utilities.BrowserUtils;
 import com.eurotechStudy.utilities.ConfigurationReader;
 import com.eurotechStudy.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,6 +13,7 @@ import org.junit.Assert;
 
 public class LoginStepDefs {
 
+    LoginPage loginPage = new LoginPage();
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
@@ -25,7 +27,6 @@ public class LoginStepDefs {
     public void the_user_enters_teacher_credentials() {
         String username=ConfigurationReader.get("usernameTeacher");
         String password=ConfigurationReader.get("passwordTeacher");
-        LoginPage loginPage=  new LoginPage();
         loginPage.login(username,password);
         BrowserUtils.waitFor(2);
     }
@@ -50,7 +51,7 @@ public class LoginStepDefs {
     }
     @When("the user logs in using {string} and {string}")
     public void the_user_logs_in_using_and(String username, String password) {
-        new LoginPage().login(username, password);
+        loginPage.login(username, password);
         BrowserUtils.waitFor(2);
 
     }
@@ -63,4 +64,5 @@ public class LoginStepDefs {
 //        Assert.assertTrue(actualMessage.contains(name));
         Assert.assertTrue(new DashboardPage().welcomeMessage.getText().contains(name));
     }
+
 }
