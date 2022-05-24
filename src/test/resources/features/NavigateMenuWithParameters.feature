@@ -1,7 +1,5 @@
 @navigate
 Feature: Navigate to menu with Parameters
-
-
   Scenario: User navigate to menu
     Given the user is on the login page
     When the user logs in using "eurotech@gmail.com" and "Test12345!"
