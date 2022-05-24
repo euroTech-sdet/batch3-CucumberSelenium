@@ -1,7 +1,7 @@
 @login
 Feature: User should be able to login
 
-  @teacher @smoke
+  @wip
   Scenario: Login as a teacher
     Given the user is on the login page
     When the user enters teacher credentials

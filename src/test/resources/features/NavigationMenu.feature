@@ -1,4 +1,3 @@
-@wip
 Feature: Teachers should be able to Navigate to Menus
    @123
   Scenario: Navigating to Developers menu

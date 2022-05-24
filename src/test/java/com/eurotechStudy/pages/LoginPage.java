@@ -33,8 +33,11 @@ public class LoginPage extends BasePage {
     }
 
     public void login(String username,String password){
+        understandBtn.click();
+        loginBtnBasePage.click();
         emailInput.sendKeys(username);
         passwordInput.sendKeys(password);
+        loginBtnLoginPage.click();
     }
 
 
