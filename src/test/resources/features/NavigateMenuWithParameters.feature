@@ -22,3 +22,4 @@ Feature: Navigate to menu with Parameters
     Then the user should be able to login
     And the user navigates to "My Account" menu
     Then the user should be able to see header as "Dashboard"
+
