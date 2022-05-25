@@ -4,6 +4,8 @@ import com.eurotechStudy.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
+import java.time.Duration;
+
 public class Hooks {
 
 
@@ -11,10 +13,14 @@ public class Hooks {
     public void setup() {
 
         System.out.println("--- This Statement comes from BEFORE ---");
+        Driver.get().manage().window().maximize();
+        Driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
     }
 
     @After
     public void tearDown() {
+
 
         Driver.closeDriver();
         System.out.println("--- This Statement comes from AFTER ---");
