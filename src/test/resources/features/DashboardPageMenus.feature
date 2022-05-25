@@ -13,7 +13,7 @@ Feature: DashboardPage Menus
       | All Posts  |
       | My Account |
 
-
+  @wip
   Scenario: User should be able to see the Dashboard menus after logged in as a student
 
     When the user logs in using "zehra@gmail.com" and "12345#"
@@ -22,10 +22,11 @@ Feature: DashboardPage Menus
       | All Posts  |
       | My Account |
 
-
+  @wip
   Scenario: Log in as a specific user
 
     When the user logs in using following credentials
+#    Dilediğinizi yazabilirsiniz, açıklama yapabilirsiniz
       | username | eurotech@gmail.com |
       | password | Test12345!         |
     Then the user should be able to login

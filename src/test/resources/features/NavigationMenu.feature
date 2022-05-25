@@ -1,4 +1,4 @@
-@wip
+
 Feature: Teachers should be able to Navigate to Menus
 
   Background:
