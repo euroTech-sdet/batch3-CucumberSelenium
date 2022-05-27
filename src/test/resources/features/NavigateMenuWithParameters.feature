@@ -24,7 +24,7 @@ Feature: Navigate to menu with Parameters
 
 
   @navigate
-  Scenario Outline: User navigate to menu outline
+  Scenario Outline: User navigate to menu outline "<userType>"
     Given the user is on the login page
     When the user logs in using "<userTYpe>" and "<password>"
     Then the user should be able to login

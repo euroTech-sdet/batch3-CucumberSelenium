@@ -34,7 +34,7 @@ Feature: Account Types
       | havva@outlook.com |
 
   @type
-  Scenario Outline: DD Account Test
+  Scenario Outline: DD Account Test "<name>"
     Given the user is on the login page
     When the user logs in using "<userType>" and "<password>"
     Then the user should be able to login and see message "<name>"
