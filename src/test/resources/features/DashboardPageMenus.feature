@@ -34,3 +34,4 @@ Feature: DashboardPage Menus
       | Developers |
       | All Posts  |
       | My Account |
+
