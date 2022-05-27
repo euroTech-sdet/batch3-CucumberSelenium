@@ -1,8 +1,7 @@
-
 Feature: DashboardPage Menus
 
- Background:
-   Given the user is on the login page
+  Background:
+    Given the user is on the login page
 
 
   Scenario: User should be able to see the Dashboard menus after logged in as a teacher
@@ -36,14 +35,14 @@ Feature: DashboardPage Menus
       | My Account |
 
   @wip
-  Scenario: Log in as a specific user
-
+  Scenario: Log in as a specific user with data table
     When the user logs in using following credentials
 #    Dilediğinizi yazabilirsiniz, açıklama yapabilirsiniz
       | username | eurotech@gmail.com |
       | password | Test12345!         |
     Then the user should be able to login
-    Then the user should be able to see following menus
-      | Developers |
-      | All Posts  |
-      | My Account |
+    Then the user should be able to see following menu test
+      | Developers | Eurotech |
+      | All Posts  | Mustafa  |
+      | My Account | Zehra    |
+    #Datatable ile step definitions larda yukaridaki datalari kullnabilirsiniz.

@@ -3,6 +3,7 @@ package com.eurotechStudy.step_definitions;
 import com.eurotechStudy.pages.DashboardPage;
 import com.eurotechStudy.pages.LoginPage;
 import com.eurotechStudy.utilities.BrowserUtils;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -25,16 +26,19 @@ public class DashboardPageMenusStepDefs {
 
     }
 
-
     @When("the user logs in using following credentials")
     public void the_user_logs_in_using_following_credentials(Map<String, String > userCredential) {
 
         System.out.println("userCredential = " + userCredential);
-
         new LoginPage().login(userCredential.get("username"), userCredential.get("password"));
 
     }
+    @Then("the user should be able to see following menu test")
+    public void theUserShouldBeAbleToSeeFollowingMenuTest(DataTable table) {
+        System.out.println("table.cell(0,0) = " + table.cell(0, 0));
+        System.out.println("table.cell(0,1) = " + table.cell(0, 1));
+        System.out.println("table.cell(1,0) = " + table.cell(1, 0));
+        System.out.println("table.cell(1,1) = " + table.cell(1, 1));
 
-
-
+    }
 }
