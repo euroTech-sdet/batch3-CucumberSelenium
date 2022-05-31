@@ -16,7 +16,7 @@ public class Hooks {
     public void setup() {
 
         System.out.println("--- This Statement comes from BEFORE ---");
-        Driver.get().manage().window().maximize();
+        //Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
     }
