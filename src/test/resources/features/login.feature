@@ -18,3 +18,4 @@ Feature: User should be able to login
     Given the user is on the login page
     When the user enters developer credentials
     Then the user should be able to login
+

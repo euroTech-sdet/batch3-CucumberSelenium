@@ -20,13 +20,8 @@ public class EditProfilePage extends BasePage{
     WebElement selectMenu= Driver.get().findElement(By.xpath("//select[@name='"+status+"']"));
     Select select= new Select(selectMenu);
     select.selectByValue(type);
-    List<String> menu = new ArrayList<>();
-    List<WebElement> options = select.getOptions();
-    for (WebElement option : options) {
-      menu.add(option.getText());
-    }
     BrowserUtils.waitFor(2);
-    System.out.println("menu = " + menu);
+
   }
 
   public void addInfo_Method(String placeBox, String placeInput){
