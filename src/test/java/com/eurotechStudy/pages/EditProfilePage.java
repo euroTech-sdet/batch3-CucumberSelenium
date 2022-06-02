@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class EditProfilePage extends BasePage{
 
   @FindBy(xpath = "//input[@type='submit']")
@@ -16,8 +20,13 @@ public class EditProfilePage extends BasePage{
     WebElement selectMenu= Driver.get().findElement(By.xpath("//select[@name='"+status+"']"));
     Select select= new Select(selectMenu);
     select.selectByValue(type);
+    List<String> menu = new ArrayList<>();
+    List<WebElement> options = select.getOptions();
+    for (WebElement option : options) {
+      menu.add(option.getText());
+    }
     BrowserUtils.waitFor(2);
-
+    System.out.println("menu = " + menu);
   }
 
   public void addInfo_Method(String placeBox, String placeInput){

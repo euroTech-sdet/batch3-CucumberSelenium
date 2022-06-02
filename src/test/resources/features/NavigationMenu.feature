@@ -5,7 +5,7 @@ Feature: Teachers should be able to Navigate to Menus
     Given the user is on the login page
     When the user enters teacher credentials
 
-    @123
+
   Scenario: Navigating to Developers menu
     And the user should be able to login
     Then the user navigates to Developers menu

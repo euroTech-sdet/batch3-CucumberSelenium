@@ -376,6 +376,4 @@ public class BrowserUtils {
         new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-
-
 }

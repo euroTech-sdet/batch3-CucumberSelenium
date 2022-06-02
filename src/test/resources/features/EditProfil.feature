@@ -4,6 +4,7 @@ Feature: The user should be able to edit profile
   Background:
     Given the user is on the login page
 
+
     Scenario: edit profile
       When the user logs in using "eurotech@gmail.com" and "Test12345!"
       And the user navigates to "Edit Profile"
@@ -16,7 +17,7 @@ Feature: The user should be able to edit profile
       And the user add "bio" "SDET programme"
       Then the user enters submit button
 
-  @edit
+  @xyz
   Scenario Outline: edit profile with scenario outline
     When the user logs in using "<email>" and "<password>"
     And the user navigates to "<add info module>"

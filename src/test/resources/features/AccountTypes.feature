@@ -14,7 +14,8 @@ Feature: Account Types
     Given the user is on the login page
     When the user logs in using "oyku@gmail.com" and "oyku123!"
     Then the user should be able to login and see message "oyku"
-@123
+
+    @123
   Scenario: Mentor User
     Given the user is on the login page
     When the user logs in using "havva@outlook.com" and "Havva123!"
@@ -33,7 +34,7 @@ Feature: Account Types
       | havva@outlook.com |
       | havva@outlook.com |
 
-  @type
+
   Scenario Outline: DD Account Test "<name>"
     Given the user is on the login page
     When the user logs in using "<userType>" and "<password>"
