@@ -3,7 +3,7 @@ Feature: DashboardPage Menus
   Background:
     Given the user is on the login page
 
-
+@123
   Scenario: User should be able to see the Dashboard menus after logged in as a teacher
 
     When the user logs in using "eurotech@gmail.com" and "Test12345!"
@@ -12,7 +12,7 @@ Feature: DashboardPage Menus
       | All Posts  |
       | My Account |
 
-  @wip
+  @xyz
   Scenario: User should be able to see the Dashboard menus after logged in as a student
 
     When the user logs in using "zehra@gmail.com" and "12345#"

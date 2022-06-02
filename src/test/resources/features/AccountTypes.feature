@@ -9,12 +9,12 @@ Feature: Account Types
     Given the user is on the login page
     When the user logs in using "zehra@gmail.com" and "12345#"
     Then the user should be able to login and see message "zehra"
-  @FailedTest
+  @xyz
   Scenario: Developer User
     Given the user is on the login page
     When the user logs in using "oyku@gmail.com" and "oyku123!"
     Then the user should be able to login and see message "oyku"
-
+@123
   Scenario: Mentor User
     Given the user is on the login page
     When the user logs in using "havva@outlook.com" and "Havva123!"

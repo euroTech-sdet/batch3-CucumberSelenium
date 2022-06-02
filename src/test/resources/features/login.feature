@@ -13,7 +13,7 @@ Feature: User should be able to login
     When the user enters student credentials
     Then the user should be able to login
 
-  @developer @smoke
+
   Scenario: Login as a developer
     Given the user is on the login page
     When the user enters developer credentials
