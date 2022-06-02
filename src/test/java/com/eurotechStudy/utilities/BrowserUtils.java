@@ -70,7 +70,6 @@ public class BrowserUtils {
 
     /**
      * Performs a pause
-     *
      * @param seconds
      */
     public static void waitFor(int seconds) {
