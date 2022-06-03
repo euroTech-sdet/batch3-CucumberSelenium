@@ -68,12 +68,23 @@ public class Driver {
                 case "remote_chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.setCapability("platform", Platform.ANY);
+
                     try {
-                        driverPool.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions));
+                        driverPool.set(new RemoteWebDriver(new URL("http://ec2-54-196-191-191.compute-1.amazonaws.com/wd/hub"),chromeOptions));
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
+                case "remote_firefox":
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.setCapability("platform",Platform.ANY);
+                    try {
+                        driverPool.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefoxOptions));
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
             }
+
         }
         return driverPool.get();
     }
